@@ -1,4 +1,4 @@
-package com.koreait.short_url_project_02;
+package com.koreait.short_url_project_02.domain.home.home.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -17,12 +17,12 @@ public class HomeController {
     @GetMapping("/")
     @ResponseBody
     public String home() {
-        return "Main Page! " + customSiteName;
+        return "Main Page!!! " + customSiteName;
     }
 
     @GetMapping("/secretKey")
     @ResponseBody
     public String secretKey() {
-        return "secretKey:  " + secretKey;
+        return "secretKey :  " + secretKey;
     }
 }
