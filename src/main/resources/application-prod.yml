@@ -1,29 +1,13 @@
 server:
   port: 8080
+  shutdown: graceful
 spring:
-  output:
-    ansi:
-      enabled: always
-  datasource:
-    url: jdbc:mysql://172.17.0.1:3306/surl_prod
-    username: root
-    password: 1234
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: false
-        highlight_sql: false
-        use_sql_comments: false
-logging:
-  level:
-    com.koreait.short_url_project_02: INFO
-    org.hibernate.SQL: INFO
-    org.hibernate.orm.jdbc.bind: INFO
-    org.hibernate.orm.jdbc.extract: INFO
-    org.springframework.transaction.interceptor: INFO
+  autoconfigure:
+    exclude:
+  lifecycle:
+    timeout-per-shutdown-phase: 1h
 custom:
   site:
     name: "My Site Prod"
+
+    redis :
