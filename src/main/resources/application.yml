@@ -9,10 +9,14 @@ spring:
       - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
       - org.springframework.boot.autoconfigure.session.SessionAutoConfiguration
   datasource:
-    url: jdbc:mysql://localhost:3307/surl_dev
-    username: root
-    password: koreait123414
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:postgresql://localhost:5432/surl_dev
+    #username: postgres
+    #password: koreait123414
+    #driver-class-name: org.postgresql.Driver
+    url: jdbc:h2:./db_dev;MODE=MySQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
   jpa:
     hibernate:
       ddl-auto: update
@@ -28,7 +32,7 @@ custom:
 logging:
   level:
     com.koreait.short_url_project_02: DEBUG
-    org.hidernate.SQL: DEBUG
+    org.hibernate.SQL: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE
-    org.hidernate.orm.jdbc.extract: TRACE
+    org.hibernate.orm.jdbc.extract: TRACE
     org.springframework.transaction.interceptor: TRACE
