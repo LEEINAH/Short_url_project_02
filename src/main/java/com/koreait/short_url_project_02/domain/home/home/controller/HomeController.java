@@ -10,6 +10,7 @@ public class HomeController {
 
     @Value("${custom.site.name}")
     private String customSiteName;
+    //hi~
 
     @Value("${custom.secret.key}")
     private String secretKey;
