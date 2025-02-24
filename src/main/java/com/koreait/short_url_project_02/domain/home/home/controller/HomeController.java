@@ -13,7 +13,7 @@ public class HomeController {
     @GetMapping("/")
     @ResponseBody
     public String home() {
-        return "Main Page 제발 띄워줄래??";
+        return "자동배포 테스트";
     }
 
 }
